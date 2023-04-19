@@ -18,7 +18,9 @@ app.post("/personas", async (req, res) => {
 
     res.json({ msg: "Persona creada!" });
   } catch (error) {
+    res.json({ msg: "error" });
     console.log(error);
+    res.status(500).json({ msg: "Ha ocurrido un error al crear la persona" });
   }
 });
 

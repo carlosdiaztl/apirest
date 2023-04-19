@@ -93,6 +93,7 @@ const handleSubmit = (event) => {
   fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
+      alert(data.msg);
       console.log(data.msg);
     })
     .catch((error) => {
